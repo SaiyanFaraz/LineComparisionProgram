@@ -1,23 +1,11 @@
 import java.lang.Integer;
+import java.util.Scanner;
 
 public class LineComparisionProblem {
-	public static void main(String[] srgs)
+	public Integer compareLines(int x1,int x2, int y1, int y2, int p1, int p2, int q1, int q2)
 	{
-		System.out.println("Welcome to Line Comparison Computation Program");
-
-		int x1,x2,y1,y2,p1,p2,q1,q2;
 		Integer lengthOfLine1;
 		Integer lengthOfLine2;
-		x1= (int)Math.floor(Math.random()*100);
-		x2= (int)Math.floor(Math.random()*100);
-		y1= (int)Math.floor(Math.random()*100);
-		y2= (int)Math.floor(Math.random()*100);
-		
-		p1= (int)Math.floor(Math.random()*100);
-		p2= (int)Math.floor(Math.random()*100);
-		q1= (int)Math.floor(Math.random()*100);
-		q2= (int)Math.floor(Math.random()*100);
-		
 		
 		System.out.println("Point1 of line1 is at: "+(x1+","+y1));
 		System.out.println("Point2 of line1 is at: "+(x2+","+y2));
@@ -50,5 +38,25 @@ public class LineComparisionProblem {
 		{
 			System.out.println("Line1 is lesser than line 2 through comparision");
 		}
+
+	}
+	
+	public static void main(String[] srgs)
+	{
+		System.out.println("Welcome to Line Comparison Computation Program");
+		
+		System.out.println("Enter the co ordinates of Line-1 an Line-2");
+		Scanner input = new Scanner(System.in);
+				int x1 = input.nextInt();
+				int x2 = input.nextInt();
+				int y1 = input.nextInt();
+				int y2 = input.nextInt();
+				int p1 = input.nextInt();
+				int p2 = input.nextInt();
+				int q1 = input.nextInt();
+				int q2 = input.nextInt();
+		LineComparisionProblem object1 = new LineComparisionProblem();
+		
+		object1.compareLines(x1, x2, y1, y2, p1, p2, q1, q2);
 	}
 }
